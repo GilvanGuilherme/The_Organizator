@@ -1,0 +1,27 @@
+# dependências
+node_modules/
+
+# arquivos de ambiente
+.env
+
+# logs
+*.log
+
+# arquivos do sistema
+.DS_Store
+
+# build
+dist/
+build/
+
+# banco local
+*.sqlite
+*.db
+
+# arquivos temporários
+temp/
+tmp/
+
+# IDE
+.vscode/
+.idea/
