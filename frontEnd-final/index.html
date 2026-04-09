@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Organizator - Seu Gerenciador de Tarefas Inteligente</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- =============================================
+         NAVBAR
+         → HOME         : href="index.html"
+         → SOBRE NÓS    : href="sobre.html"    (crie sobre.html)
+         → CONTATO      : href="contato.html"  (crie contato.html)
+         → LOGIN        : href="login.html"    (crie login.html)
+         → CRIAR CONTA  : href="cadastro.html" (crie cadastro.html)
+    ============================================= -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">
+        <!-- Logo imã: ajuste o src para o caminho correto na sua pasta images/ -->
+        <img src="images/1 logo img.jpeg" alt="Img Logo" class="logo-icon" />
+        <span class="brand-name">The_Organizator</span>
+      </a>
+
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-link active">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link">SOBRE NÓS</a></li>
+        <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-login">LOGIN</a>
+        <a href="cadastro.html" class="btn btn-create-account"
+          >CRIE SUA CONTA GRATUITA</a
+        >
+      </div>
+    </nav>
+
+    <!-- =============================================
+         HERO — fundo azul, logo centralizada + descrição
+         Troque o src da logo pelo caminho correto:
+         Ex: src="images/logo-complete.png"
+    ============================================= -->
+    <main class="hero-section">
+      <div class="hero-content">
+        <img
+          src="images/1 logo img.jpeg"
+          alt="The Organizator - Logo Completa"
+          class="hero-logo"
+        />
+        <p class="hero-subtitle">
+          O seu gerenciador online de tarefas e compromissos.<br />
+          Não perca prazos nem esqueça compromissos.<br />
+          Pessoal ou profissional, o The Organizator ajuda a organizar a sua
+          agenda e a sua rotina.
+        </p>
+      </div>
+    </main>
+
+    <!-- =============================================
+         FOOTER — 2 colunas: Sobre nós (esquerda) | Contato (direita)
+         Ícones: ajuste o src de cada <img> para o caminho correto.
+         Links sociais: substitua href="#" pela URL real de cada rede.
+         Ex: href="https://www.instagram.com/theorganizator"
+    ============================================= -->
+    <footer class="footer">
+      <!-- COLUNA ESQUERDA: Sobre nós -->
+      <div class="footer-column">
+        <h3 class="footer-title">Sobre nós</h3>
+        <p class="footer-text">
+          Ajudamos as pessoas a organizarem suas vidas através de um gerenciador
+          de tarefas simples, prático e bonito.
+        </p>
+      </div>
+
+      <!-- COLUNA DIREITA: Contato -->
+      <div class="footer-column footer-column--right">
+        <h3 class="footer-title">Contato</h3>
+        <p class="footer-text"><strong>Dúvidas ou sugestões?</strong></p>
+        <p class="footer-text footer-email">contato@theorganizator.app</p>
+
+        <div class="social-icons">
+          <!-- src="images/2 facebook.png" -->
+          <a href="#" class="social-link" title="Facebook">
+            <img src="images/2 facebook.png" alt="Facebook" />
+          </a>
+          <!-- src="images/3 instagram.png" -->
+          <a href="#" class="social-link" title="Instagram">
+            <img src="images/3 instagram.png" alt="Instagram" />
+          </a>
+          <!-- src="images/5 whatsapp.png" -->
+          <a href="#" class="social-link" title="WhatsApp">
+            <img src="images/5 whatsapp.png" alt="WhatsApp" />
+          </a>
+         
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

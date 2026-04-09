@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós - The Organizator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <!-- =============================================
+         NAVBAR — igual à index.html
+         O link "SOBRE NÓS" recebe a classe "active"
+         para indicar a página atual
+    ============================================= -->
+    <nav class="navbar">
+      <a href="index.html" class="navbar-brand">
+        <!-- Logo imã: ajuste o src para o caminho correto na sua pasta images/ -->
+        <img src="images/1 logo img.jpeg" alt="Img Logo" class="logo-icon" />
+        <span class="brand-name">The_Organizator</span>
+      </a>
+
+      <ul class="navbar-nav">
+        <li><a href="index.html" class="nav-link">HOME</a></li>
+        <li><a href="sobre.html" class="nav-link active">SOBRE NÓS</a></li>
+        <li><a href="contato.html" class="nav-link">CONTATO</a></li>
+      </ul>
+
+      <div class="navbar-actions">
+        <a href="login.html" class="btn btn-login">LOGIN</a>
+        <a href="cadastro.html" class="btn btn-create-account"
+          >CRIE SUA CONTA GRATUITA</a
+        >
+      </div>
+    </nav>
+
+    <!-- =============================================
+         HERO INTERNO — fundo azul mais compacto,
+         apenas com título e subtítulo da seção.
+         Diferente do hero da index (que tem a logo grande),
+         as páginas internas usam o "hero-interno" menor.
+    ============================================= -->
+    <section class="hero-interno">
+      <div class="hero-interno-content">
+        <h1 class="hero-interno-title">Sobre Nós</h1>
+        <p class="hero-interno-subtitle">
+          Conheça a nossa missão e quem está por trás do The Organizator
+        </p>
+      </div>
+    </section>
+
+    <!-- =============================================
+         CONTEÚDO PRINCIPAL DA PÁGINA "SOBRE NÓS"
+         Estrutura com cards de missão, visão e valores,
+         e uma seção de apresentação da equipe.
+         → Substitua os textos pelos reais quando disponíveis.
+         → Substitua os src das imagens da equipe pelos reais.
+    ============================================= -->
+    <main class="pagina-conteudo">
+      <!-- SEÇÃO: Quem Somos -->
+      <section class="sobre-intro">
+        <div class="sobre-intro-texto">
+          <h2 class="secao-titulo">Quem Somos</h2>
+          <p class="secao-texto">
+            O <strong>The Organizator</strong> nasceu da necessidade real de
+            pessoas que queriam organizar melhor sua rotina — sem complicação,
+            sem excesso, sem aprender uma ferramenta nova a cada semana.
+          </p>
+          <p class="secao-texto">
+            Somos uma equipe apaixonada por produtividade e design, dedicada a
+            criar uma experiência de gerenciamento de tarefas que seja ao mesmo
+            tempo poderosa e intuitiva.
+          </p>
+        </div>
+        <!-- 
+          Imagem ilustrativa da seção "Quem Somos".
+          Coloque a imagem em: images/sobre-quem-somos.png (ou .jpg)
+          e atualize o src abaixo.
+        -->
+        
+      </section>
+
+     
+
+      <!-- SEÇÃO: Nossa Equipe -->
+      <section class="equipe-section">
+        <h2 class="secao-titulo secao-titulo--centralizado">Nossa Equipe</h2>
+        <p class="secao-texto secao-texto--centralizado">
+          Pessoas reais, apaixonadas por organização e tecnologia.
+        </p>
+
+        <div class="equipe-grid">
+          <!--
+            Card de membro da equipe.
+            Duplique este bloco para cada membro.
+            → Substitua src da foto: images/equipe-nome.jpg
+            → Substitua o nome, cargo e bio pelo real.
+          -->
+          <div class="equipe-card">
+            <img
+              src="images/equipe-membro-1.jpg"
+              alt="Foto do membro"
+              class="equipe-foto"
+            />
+            <h4 class="equipe-nome">Nome do Membro</h4>
+            <span class="equipe-cargo">Cargo / Função</span>
+            <p class="equipe-bio">
+              Breve descrição sobre o membro, sua experiência e paixão pelo
+              projeto.
+            </p>
+          </div>
+<div class="equipe-card">
+            <img
+              src="images/equipe-membro-1.jpg"
+              alt="Foto do membro"
+              class="equipe-foto"
+            />
+            <h4 class="equipe-nome">Nome do Membro</h4>
+            <span class="equipe-cargo">Cargo / Função</span>
+            <p class="equipe-bio">
+              Breve descrição sobre o membro, sua experiência e paixão pelo
+              projeto.
+            </p>
+          </div>
+          <div class="equipe-card">
+            <img
+              src="images/equipe-membro-2.jpg"
+              alt="Foto do membro"
+              class="equipe-foto"
+            />
+            <h4 class="equipe-nome">Nome do Membro</h4>
+            <span class="equipe-cargo">Cargo / Função</span>
+            <p class="equipe-bio">
+              Breve descrição sobre o membro, sua experiência e paixão pelo
+              projeto.
+            </p>
+          </div>
+
+          <div class="equipe-card">
+            <img
+              src="images/Rodrigo.jpeg"
+              alt="Foto do membro"
+              class="equipe-foto"
+            />
+            <h4 class="equipe-nome">Rodrigo Alexandre</h4>
+            <span class="equipe-cargo">Cargo / Função</span>
+            <p class="equipe-bio">
+              Breve descrição sobre o membro, sua experiência e paixão pelo
+              projeto.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =============================================
+         FOOTER — idêntico ao da index.html
+         Mantenha sempre o mesmo footer em todas as páginas.
+    ============================================= -->
+    <footer class="footer">
+      <div class="footer-column">
+        <h3 class="footer-title">Sobre nós</h3>
+        <p class="footer-text">
+          Ajudamos as pessoas a organizarem suas vidas através de um gerenciador
+          de tarefas simples, prático e bonito.
+        </p>
+      </div>
+
+      <div class="footer-column footer-column--right">
+        <h3 class="footer-title">Contato</h3>
+        <p class="footer-text"><strong>Dúvidas ou sugestões?</strong></p>
+        <p class="footer-text footer-email">contato@theorganizator.app</p>
+
+        <div class="social-icons">
+          <a href="#" class="social-link" title="Facebook">
+            <img src="images/2 facebook.png" alt="Facebook" />
+          </a>
+          <a href="#" class="social-link" title="Instagram">
+            <img src="images/3 instagram.png" alt="Instagram" />
+          </a>
+          <a href="#" class="social-link" title="WhatsApp">
+            <img src="images/5 whatsapp.png" alt="WhatsApp" />
+          </a>
+         
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
