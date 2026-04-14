@@ -1,26 +1,42 @@
-# --- SISTEMA ---
+# --- SISTEMA OPERACIONAL ---
 .DS_Store
 Thumbs.db
-.env
+.directory
+*.swp
+*.swo
 
-# --- BACKEND (Node.js) ---
+# --- NODE / DEPENDÊNCIAS ---
 node_modules/
-dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.prisma/
-# Ignora o banco local para não sobrescrever o dos colegas
-backend/prisma/dev.db
-backend/prisma/dev.db-journal
-
-# --- FRONTEND (React/Vite) ---
-frontend/node_modules/
-frontend/dist/
-frontend/build/
+pnpm-debug.log*
+.npm
 .eslintcache
 
-# --- UPLOADS TEMPORÁRIOS ---
-# Mantém a pasta mas ignora os arquivos dentro dela
-backend/uploads/*
-!backend/uploads/.gitkeep
+# --- FRONTEND (REACT/VITE) ---
+frontend-react/dist/
+frontend-react/dist-ssr/
+frontend-react/*.local
+
+# --- BACKEND & BANCO DE DATOS ---
+backend/node_modules/
+backend/*.db
+backend/*.db-journal
+backend/*.sqlite
+backend/*.sqlite-journal
+database/
+
+# --- AMBIENTE E SEGURANÇA ---
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# --- EDITORES (VS Code, IntelliJ) ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.sublime-project
+*.sublime-workspace
