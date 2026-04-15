@@ -1,5 +1,7 @@
 # Registro das Sprints
 
+#Nota: #https://trello.com/b/nzCRhEAY/projeto-final-web-iii
+
 ーーー
 ##\* Sprint 1
 **Período:** 02/03/2026 - 10/03/2026

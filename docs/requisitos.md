@@ -1,20 +1,30 @@
-Requisitos do Sistema: Organizador de Atividades The_Oranizator
 Requisitos Funcionais (RF)
-RF01: O sistema deve permitir que novos usuários se cadastrem informando usuário e senha.
-RF02: O sistema deve realizar a autenticação do usuário (Login) comparando as credenciais com os dados armazenados.
-RF03: O sistema deve permitir que o usuário logado adicione novas tarefas à sua lista.
-RF04: O sistema deve exibir uma lista dinâmica com todas as tarefas cadastradas pelo usuário.
-RF05: O sistema deve permitir que o usuário limpe toda a sua lista de atividades de uma só vez.
-RF06: O sistema deve permitir que o usuário saia da aplicação (Logout), retornando à tela inicial.
+Estes descrevem as ações que o sistema deve permitir.
 
-**_ Requisitos Não Funcionais (RNF) _**
-RNF01 (Usabilidade): A interface deve ser responsiva e centralizada, garantindo boa visualização em diferentes tamanhos de tela.
-RNF02 (Desempenho): A transição entre as telas (Home, Login, Cadastro, App) deve ser instantânea, sem recarregamento de página (conceito de SPA).
-RNF03 (Segurança): O campo de senha no formulário de Login e Cadastro deve ocultar os caracteres digitados (tipo password).
-RNF04 (Compatibilidade): O sistema deve ser executável em qualquer navegador moderno (Chrome, Firefox, Safari) via suporte a HTML5, CSS3 e ES6+.
-RNF05 (Arquitetura): O código deve ser modularizado, separando a lógica de interface (ui.js) da lógica de aplicação (app.js).
+RNF01,Persistência,Os dados devem ser armazenados de forma relacional utilizando SQLite através da biblioteca better-sqlite3.
 
-Versão do Documento
-Atualizado em: 30/03/2026
+RNF02,Desempenho,O backend deve responder às requisições de listagem em menos de 200ms.
 
-Responsáveis: Victor, Gilvan Silva, Rodrigo e Rafael
+RNF03,Segurança,As senhas dos usuários devem ser criptografadas antes de serem salvas no banco.
+
+RNF04,Interface (UX),O sistema deve ser uma SPA (Single Page Application) para evitar recarregamentos de página.
+
+RNF05,Disponibilidade,"O frontend deve ser responsivo, adaptando-se a dispositivos móveis e desktop."
+
+Requisitos Não Funcionais (RNF)
+
+Estes descrevem as qualidades técnicas e restrições do sistema.
+
+RF01,Cadastro de Usuário,"O sistema deve permitir que novos usuários criem conta com nome, e-mail e senha."
+
+RF02,Autenticação (Login),O sistema deve validar as credenciais do usuário para permitir acesso ao Dashboard.
+
+RF03,Criar Tarefa,O usuário deve poder adicionar novas atividades com título e categoria.
+
+RF04,Listar Tarefas,O sistema deve exibir todas as tarefas salvas no SQLite para o usuário logado.
+
+RF05,Excluir Tarefa,O usuário deve poder remover tarefas da sua lista permanentemente.
+
+RF06,Concluir Tarefa,O usuário deve poder marcar/desmarcar tarefas como finalizadas.
+
+RF07,Filtrar por Categoria,"O sistema deve permitir visualizar tarefas específicas (ex: Trabalho, Estudos)."
