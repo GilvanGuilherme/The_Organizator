@@ -50,7 +50,7 @@ function Contato() {
               />
               <div>
                 <strong className="contato-label">Localização</strong>
-                <p className="contato-valor">Brasil — 100% online</p>
+                <p className="contato-valor"> Maranguape / Ce </p>
               </div>
             </div>
 

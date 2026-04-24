@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const usuarioRoutes = require("./src/routes/usuarioRoutes");
-const tarefaRoutes = require("./src/routes/tarefaRoutes"); // NOVO
+const tarefaRoutes = require("./src/routes/tarefaRoutes");
 
 const app = express();
 app.use(cors());
@@ -9,7 +9,7 @@ app.use(express.json());
 
 // Rotas
 app.use("/api", usuarioRoutes);
-app.use("/api", tarefaRoutes); // NOVO
+app.use("/api", tarefaRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => {

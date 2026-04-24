@@ -67,10 +67,7 @@ function Sobre() {
               />
               <h4 className="equipe-nome">Rafael Portela</h4>
               <span className="equipe-cargo">Cargo / Função</span>
-              <p className="equipe-bio">
-                Breve descrição sobre o membro, sua experiência e paixão pelo
-                projeto.
-              </p>
+              <p className="equipe-bio">Suporte</p>
             </div>
 
             {/* Card 3: Victor */}
@@ -82,10 +79,7 @@ function Sobre() {
               />
               <h4 className="equipe-nome">Victor Mafra</h4>
               <span className="equipe-cargo">Desenvolvedor Back-end</span>
-              <p className="equipe-bio">
-                Breve descrição sobre o membro, sua experiência e paixão pelo
-                projeto.
-              </p>
+              <p className="equipe-bio">Suporte</p>
             </div>
 
             {/* Card 4: Rodrigo */}

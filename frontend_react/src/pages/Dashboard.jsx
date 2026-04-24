@@ -88,7 +88,8 @@ function Dashboard() {
           <div className="dashboard-user-info">
             <h2 className="dashboard-titulo">Minhas Tarefas</h2>
             <p className="dashboard-subtitulo">
-              Organizando a rotina de <strong>{usuario?.nome}</strong>
+              Seja bem-vindo, <strong>{usuario?.nome}</strong> não esqueça do
+              seus próximos compromissos:
             </p>
           </div>
 

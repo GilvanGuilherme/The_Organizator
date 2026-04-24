@@ -835,6 +835,15 @@ body {
   font-size: 22px;
   font-weight: 700;
 }
+
+/* ALTERAÇÃO: subtítulo agora na mesma cor escura do título */
+.dashboard-subtitulo {
+  color: var(--color-text-dark);
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 4px;
+}
+
 .dashboard-btn-nova {
   padding: 10px 22px;
   font-size: 13px;
