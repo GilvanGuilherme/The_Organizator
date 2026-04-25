@@ -193,8 +193,6 @@ Liste por camadas.
 
 # 5. Diagramas do Sistema
 
-> Os diagramas podem ser incluídos como imagens ou usando sintaxe Mermaid em Markdown.
-
 ## 5.1 Diagrama de Casos de Uso
 
 ```mermaid
