@@ -192,27 +192,90 @@ Liste por camadas.
 
 ## 5.1 Diagrama de Casos de Uso
 
+# Diagrama de Casos de Uso
+
+```mermaid
+useCaseDiagram
+actor "Usuário" as U
+
+package "The Organizator" {
+  usecase "UC1 - Cadastrar Usuário" as UC1
+  usecase "UC2 - Efetuar Login" as UC2
+  usecase "UC3 - Cadastrar Atividade/Meta" as UC3
+  usecase "UC4 - Editar Atividade" as UC4
+  usecase "UC5 - Remover Atividade" as UC5
+  usecase "UC6 - Registrar Progresso" as UC6
+}
+
+U --> UC1
+U --> UC2
+U --> UC3
+U --> UC4
+U --> UC5
+U --> UC6
+```
+
+---
+
 ## 5.2 Diagrama de Classes / Modelo de Dados
 
-Inclua um modelo que represente as entidades principais do sistema, por exemplo:
+## 📄 classes.md
 
-- Usuário
-- Trilha / Receita
-- Categoria (se existir)
+````md
+# Diagrama de Classes
+
+```mermaid
+classDiagram
+
+class Usuario {
+  +int id
+  +string nome
+  +string email
+  -string senha
+  +cadastrar()
+  +login()
+}
+
+class Atividade {
+  +int id
+  +string titulo
+  +string descricao
+  +date dataInicio
+  +date dataConclusao
+  +string status
+  +salvar()
+  +editar()
+  +excluir()
+}
+
+Usuario "1" --> "*" Atividade : gerencia
+```
+````
 
 ## 5.3 Diagrama de Sequência (Opcional)
 
-Escolha um fluxo importante do sistema, por exemplo:
+## 📄 sequencia.md
 
-- “Cadastrar trilha”
-- “Cadastrar receita”
+````md
+# Diagrama de Sequência
 
-Mostre a interação entre:
+```mermaid
+sequenceDiagram
 
-- Usuário
-- Interface (front)
-- API (back)
-- Banco de dados
+participant U as Usuário
+participant F as Front-end
+participant B as Back-end
+participant DB as Banco
+
+U->>F: Clica em "Remover"
+F->>B: DELETE /atividades/:id
+Note over B: Valida token
+B->>DB: DELETE atividade
+DB-->>B: OK
+B-->>F: Status 200
+F-->>U: Remove da tela
+```
+````
 
 ## 5.4 Diagrama de Navegação (Opcional)
 
@@ -685,87 +748,6 @@ Maior qualidade geral do software entregue.
 
 ---
 
-# Diagrama de Casos de Uso
-
-```mermaid
-useCaseDiagram
-actor "Usuário" as U
-
-package "The Organizator" {
-  usecase "UC1 - Cadastrar Usuário" as UC1
-  usecase "UC2 - Efetuar Login" as UC2
-  usecase "UC3 - Cadastrar Atividade/Meta" as UC3
-  usecase "UC4 - Editar Atividade" as UC4
-  usecase "UC5 - Remover Atividade" as UC5
-  usecase "UC6 - Registrar Progresso" as UC6
-}
-
-U --> UC1
-U --> UC2
-U --> UC3
-U --> UC4
-U --> UC5
-U --> UC6
-```
-
 ---
-
-## 📄 classes.md
-
-````md
-# Diagrama de Classes
-
-```mermaid
-classDiagram
-
-class Usuario {
-  +int id
-  +string nome
-  +string email
-  -string senha
-  +cadastrar()
-  +login()
-}
-
-class Atividade {
-  +int id
-  +string titulo
-  +string descricao
-  +date dataInicio
-  +date dataConclusao
-  +string status
-  +salvar()
-  +editar()
-  +excluir()
-}
-
-Usuario "1" --> "*" Atividade : gerencia
-```
-````
-
----
-
-## 📄 sequencia.md
-
-````md
-# Diagrama de Sequência
-
-```mermaid
-sequenceDiagram
-
-participant U as Usuário
-participant F as Front-end
-participant B as Back-end
-participant DB as Banco
-
-U->>F: Clica em "Remover"
-F->>B: DELETE /atividades/:id
-Note over B: Valida token
-B->>DB: DELETE atividade
-DB-->>B: OK
-B-->>F: Status 200
-F-->>U: Remove da tela
-```
-````
 
 _Fim da documentação do sistema The_Organizator._
