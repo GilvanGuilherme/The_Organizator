@@ -1,22 +1,20 @@
-# Diagrama de Casos de Uso
-
 ```mermaid
-useCaseDiagram
-actor "Usuário" as U
+flowchart LR
+  U((Usuário))
 
-package "The Organizator" {
-  usecase "UC1 - Cadastrar Usuário" as UC1
-  usecase "UC2 - Efetuar Login" as UC2
-  usecase "UC3 - Cadastrar Atividade/Meta" as UC3
-  usecase "UC4 - Editar Atividade" as UC4
-  usecase "UC5 - Remover Atividade" as UC5
-  usecase "UC6 - Registrar Progresso" as UC6
-}
+  subgraph The Organizator
+    UC1([Cadastrar Usuário])
+    UC2([Efetuar Login])
+    UC3([Cadastrar Atividade/Meta])
+    UC4([Editar Atividade])
+    UC5([Remover Atividade])
+    UC6([Registrar Progresso])
+  end
 
-U --> UC1
-U --> UC2
-U --> UC3
-U --> UC4
-U --> UC5
-U --> UC6
+  U --> UC1
+  U --> UC2
+  U --> UC3
+  U --> UC4
+  U --> UC5
+  U --> UC6
 ```

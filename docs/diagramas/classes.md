@@ -1,34 +1,22 @@
----
-
-## 📄 classes.md
-
-````md
-# Diagrama de Classes
+## 5.1 Diagrama de Casos de Uso
 
 ```mermaid
-classDiagram
+flowchart LR
+  U((Usuário))
 
-class Usuario {
-  +int id
-  +string nome
-  +string email
-  -string senha
-  +cadastrar()
-  +login()
-}
+  subgraph The Organizator
+    UC1([Cadastrar Usuário])
+    UC2([Efetuar Login])
+    UC3([Cadastrar Atividade/Meta])
+    UC4([Editar Atividade])
+    UC5([Remover Atividade])
+    UC6([Registrar Progresso])
+  end
 
-class Atividade {
-  +int id
-  +string titulo
-  +string descricao
-  +date dataInicio
-  +date dataConclusao
-  +string status
-  +salvar()
-  +editar()
-  +excluir()
-}
-
-Usuario "1" --> "*" Atividade : gerencia
+  U --> UC1
+  U --> UC2
+  U --> UC3
+  U --> UC4
+  U --> UC5
+  U --> UC6
 ```
-````
