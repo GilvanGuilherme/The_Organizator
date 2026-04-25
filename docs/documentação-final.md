@@ -193,8 +193,6 @@ Liste por camadas.
 
 # 5. Diagramas do Sistema
 
-# 5. Diagramas do Sistema
-
 ## 5.1 Diagrama de Casos de Uso
 
 ```mermaid
