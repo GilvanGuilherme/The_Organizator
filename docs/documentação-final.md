@@ -2,7 +2,7 @@
 
 **Nome do Projeto:** The_Organizator  
 **Equipe:** Gilvan, Rodrigo, Rafael e Victor  
-**Disciplina:** Projeto Integrador 2 e Web 3
+**Disciplina:** Projeto Integrador 2 e Web 3  
 **Instituição:** IFCE – Campus Maranguape  
 **Semestre:** Terceiro
 
@@ -52,6 +52,7 @@
    8.3 [Cadastro de Trilhas / Receitas](#83-cadastro-de-trilhas--receitas)  
    8.4 [Edição e Exclusão](#84-edição-e-exclusão)  
    8.5 [Erros Comuns e Soluções](#85-erros-comuns-e-soluções)
+
 9. [Decisões de Projeto e Limitações](#9-decisões-de-projeto-e-limitações)  
    9.1 [Decisões Importantes](#91-decisões-importantes)  
    9.2 [Limitações da Versão Atual](#92-limitações-da-versão-atual)
@@ -119,34 +120,34 @@ O **The_Organizator** é um sistema web desenvolvido para auxiliar no gerenciame
 
 ## 3.1 Requisitos Funcionais
 
-Requisitos do Sistema: Organizador de Atividades The_Oranizator
+Requisitos do Sistema: Organizador de Atividades The_Organizator  
 Requisitos Funcionais (RF)
 
--**RF01:** O sistema deve permitir que novos usuários se cadastrem informando usuário e senha.
+- **RF01:** O sistema deve permitir que novos usuários se cadastrem informando usuário e senha.
 
--**RF02:** O sistema deve realizar a autenticação do usuário (Login) comparando as credenciais com os dados armazenados.
+- **RF02:** O sistema deve realizar a autenticação do usuário (Login) comparando as credenciais com os dados armazenados.
 
--**RF03:** O sistema deve permitir que o usuário logado adicione novas tarefas à sua lista.
+- **RF03:** O sistema deve permitir que o usuário logado adicione novas tarefas à sua lista.
 
--**RF04:** O sistema deve exibir uma lista dinâmica com todas as tarefas cadastradas pelo usuário.
+- **RF04:** O sistema deve exibir uma lista dinâmica com todas as tarefas cadastradas pelo usuário.
 
--**RF05:** O sistema deve permitir que o usuário limpe toda a sua lista de atividades de uma só vez.
+- **RF05:** O sistema deve permitir que o usuário limpe toda a sua lista de atividades de uma só vez.
 
--**RF06:** O sistema deve permitir que o usuário saia da aplicação (Logout), retornando à tela inicial.
+- **RF06:** O sistema deve permitir que o usuário saia da aplicação (Logout), retornando à tela inicial.
 
 ## 3.2 Requisitos Não Funcionais
 
--**RNF01:** (Usabilidade): A interface deve ser responsiva e centralizada, garantindo boa visualização em diferentes tamanhos de tela.
+- **RNF01:** (Usabilidade): A interface deve ser responsiva e centralizada, garantindo boa visualização em diferentes tamanhos de tela.
 
--**RNF02:** (Desempenho): A transição entre as telas (Home, Login, Cadastro, App) deve ser instantânea, sem recarregamento de página (conceito de SPA).
+- **RNF02:** (Desempenho): A transição entre as telas (Home, Login, Cadastro, App) deve ser instantânea, sem recarregamento de página (conceito de SPA).
 
--**RNF03:** (Segurança): O campo de senha no formulário de Login e Cadastro deve ocultar os caracteres digitados (tipo password).
+- **RNF03:** (Segurança): O campo de senha no formulário de Login e Cadastro deve ocultar os caracteres digitados (tipo password).
 
--**RNF04:** (Compatibilidade): O sistema deve ser executável em qualquer navegador moderno (Chrome, Firefox, Safari) via suporte a HTML5, CSS3 e ES6+.
+- **RNF04:** (Compatibilidade): O sistema deve ser executável em qualquer navegador moderno (Chrome, Firefox, Safari) via suporte a HTML5, CSS3 e ES6+.
 
--**RNF05:** (Arquitetura): O código deve ser modularizado, separando a lógica de interface (ui.js) da lógica de aplicação (app.js).
+- **RNF05:** (Arquitetura): O código deve ser modularizado, separando a lógica de interface (ui.js) da lógica de aplicação (app.js).
 
-Versão do Documento
+Versão do Documento  
 Atualizado em: 30/03/2026
 
 Responsáveis: Victor, Gilvan Silva, Rodrigo e Rafael
@@ -169,7 +170,11 @@ Liste por camadas.
 
 - React
 - Vite / Create React App (ou outra ferramenta utilizada)
-- React Router - **Frontend:** React.js para construção da interface do usuário
+- React Router
+
+**Stack completo:**
+
+- **Frontend:** React.js para construção da interface do usuário
 - **Backend:** Node.js com Express para criação da API
 - **Banco de Dados:** SQL (MySQL) para armazenamento das informações
 - **Controle de Versão:** Git e GitHub para versionamento do projeto
@@ -191,8 +196,6 @@ Liste por camadas.
 > Os diagramas podem ser incluídos como imagens ou usando sintaxe Mermaid em Markdown.
 
 ## 5.1 Diagrama de Casos de Uso
-
-# Diagrama de Casos de Uso
 
 ```mermaid
 useCaseDiagram
@@ -218,11 +221,6 @@ U --> UC6
 ---
 
 ## 5.2 Diagrama de Classes / Modelo de Dados
-
-## 📄 classes.md
-
-````md
-# Diagrama de Classes
 
 ```mermaid
 classDiagram
@@ -250,14 +248,8 @@ class Atividade {
 
 Usuario "1" --> "*" Atividade : gerencia
 ```
-````
 
 ## 5.3 Diagrama de Sequência (Opcional)
-
-## 📄 sequencia.md
-
-````md
-# Diagrama de Sequência
 
 ```mermaid
 sequenceDiagram
@@ -275,7 +267,6 @@ DB-->>B: OK
 B-->>F: Status 200
 F-->>U: Remove da tela
 ```
-````
 
 ## 5.4 Diagrama de Navegação (Opcional)
 
@@ -286,11 +277,13 @@ Mapa simples das telas do sistema e como o usuário navega entre elas:
 - Tela de cadastro/edição
 - Outras telas relevantes
 
+---
+
 # 6. Descrição dos Módulos e Componentes
 
 ## 6.1 Organização das Pastas
 
-## BackEnd
+### BackEnd
 
 O projeto _The_Organizator_ está dividido em módulos principais, separando back-end, front-end e documentação para facilitar a organização e manutenção do sistema.
 
@@ -323,38 +316,37 @@ backEnd/
 │                                    # e configura o Express
 │
 └── README.md                        # Documentação específica do back-end
-
 ```
 
-## FrontEnd
+### FrontEnd
 
-### Estrutura HTML, CSS e JavaScript
+#### Estrutura HTML, CSS e JavaScript
 
 ```text
 frontEnd-final/
 ├── _images/                          # Imagens, ícones e fotos utilizadas no sistema
 │   ├── facebook.png                  # Ícone da rede social Facebook
-│   ├── instagram.png                # Ícone da rede social Instagram
-│   ├── whatsapp.png                 # Ícone do WhatsApp
-│   ├── email.png                    # Ícone de e-mail
-│   ├── map.png                      # Imagem relacionada à localização/mapa
-│   └── fotos da equipe              # Imagens dos integrantes do projeto
+│   ├── instagram.png                 # Ícone da rede social Instagram
+│   ├── whatsapp.png                  # Ícone do WhatsApp
+│   ├── email.png                     # Ícone de e-mail
+│   ├── map.png                       # Imagem relacionada à localização/mapa
+│   └── fotos da equipe               # Imagens dos integrantes do projeto
 │
 ├── scripts/
-│   ├── api.js                       # Responsável pela comunicação com o back-end
-│   ├── app.js                       # Funções principais e lógica da aplicação
-│   └── ui.js                        # Manipulação visual da interface
+│   ├── api.js                        # Responsável pela comunicação com o back-end
+│   ├── app.js                        # Funções principais e lógica da aplicação
+│   └── ui.js                         # Manipulação visual da interface
 │
 ├── styles/
-│   └── style.css                    # Estilos globais das páginas
+│   └── style.css                     # Estilos globais das páginas
 │
-├── index.html                       # Página inicial do sistema
-├── login.html                       # Tela de login do usuário
-├── cadastro.html                    # Tela de cadastro de novos usuários
-├── dashboard.html                   # Painel principal após autenticação
-├── contato.html                     # Página com formas de contato
-├── sobre.html                       # Página sobre o projeto e equipe
-└── recuperar-senha.html             # Tela de recuperação de senha
+├── index.html                        # Página inicial do sistema
+├── login.html                        # Tela de login do usuário
+├── cadastro.html                     # Tela de cadastro de novos usuários
+├── dashboard.html                    # Painel principal após autenticação
+├── contato.html                      # Página com formas de contato
+├── sobre.html                        # Página sobre o projeto e equipe
+└── recuperar-senha.html              # Tela de recuperação de senha
 
 frontend-react/
 ├── node_modules/                    # Dependências instaladas automaticamente pelo npm
@@ -372,7 +364,7 @@ frontend-react/
 ├── package.json                     # Dependências e scripts do projeto
 ├── package-lock.json                # Controle de versões das dependências
 ├── vite.config.js                   # Configuração do ambiente Vite
-├── eslint.config.js                # Configuração de padronização do código
+├── eslint.config.js                 # Configuração de padronização do código
 └── README.md                        # Documentação do front-end React
 ```
 
@@ -406,6 +398,8 @@ A seguir, apresenta-se o fluxo de uma operação essencial do sistema: **cadastr
 8. O front-end exibe uma mensagem de confirmação ao usuário.
 9. A nova meta é exibida na lista de atividades cadastradas.
 
+---
+
 # 7. Guia de Instalação e Execução
 
 ## 7.1 Pré-requisitos
@@ -424,28 +418,35 @@ Para executar o sistema _The_Organizator_, é necessário que o ambiente possua 
 
 Para obter uma cópia do projeto em sua máquina local, utilize o comando:
 
-```bash id="s0n5qa"
+```bash
 git clone https://github.com/GilvanGuilherme/The_Organizator.git
-
 ```
 
 ## 7.3 Instalação e Execução do Back-end
 
 Acesse a pasta do servidor:
 
+```bash
 cd backEnd
+```
 
 Instale as dependências do projeto:
 
+```bash
 npm install
+```
 
 Execute o servidor:
 
+```bash
 npm run dev
+```
+
 Explicação dos comandos:
-cd backEnd → acessa a pasta do back-end.
-npm install → instala todas as bibliotecas necessárias.
-npm run dev → inicia o servidor em modo de desenvolvimento.
+
+- `cd backEnd` → acessa a pasta do back-end.
+- `npm install` → instala todas as bibliotecas necessárias.
+- `npm run dev` → inicia o servidor em modo de desenvolvimento.
 
 O back-end será responsável por processar requisições, autenticação e comunicação com o banco de dados.
 
@@ -453,42 +454,57 @@ O back-end será responsável por processar requisições, autenticação e comu
 
 Acesse a pasta do front-end React:
 
+```bash
 cd frontend-react
+```
 
 Instale as dependências:
 
+```bash
 npm install
+```
 
 Execute a aplicação:
 
+```bash
 npm run dev
+```
+
 Explicação dos comandos:
-cd frontend-react → acessa a pasta da interface React.
-npm install → instala dependências do front-end.
-npm run dev → inicia a aplicação localmente.
+
+- `cd frontend-react` → acessa a pasta da interface React.
+- `npm install` → instala dependências do front-end.
+- `npm run dev` → inicia a aplicação localmente.
 
 Após iniciar, o sistema normalmente estará disponível em:
 
+```
 http://localhost:5173
+```
 
 ## 7.5 Variáveis de Ambiente
 
-Caso o sistema utilize variáveis de ambiente, recomenda-se criar um arquivo .env na raiz da pasta do back-end ou front-end, conforme necessidade.
+Caso o sistema utilize variáveis de ambiente, recomenda-se criar um arquivo `.env` na raiz da pasta do back-end ou front-end, conforme necessidade.
 
 Exemplo:
+
+```env
 PORT=3000
 DATABASE_URL=localhost
 JWT_SECRET=chave_secreta_exemplo
 VITE_API_URL=http://localhost:3000
+```
+
 Explicação:
-PORT → porta de execução do servidor.
-DATABASE_URL → endereço de conexão com banco de dados.
-JWT_SECRET → chave utilizada para autenticação por token.
-VITE_API_URL → URL da API consumida pelo front-end React.
 
-O arquivo .env não deve ser enviado ao repositório público, pois pode conter dados sensíveis.
+- `PORT` → porta de execução do servidor.
+- `DATABASE_URL` → endereço de conexão com banco de dados.
+- `JWT_SECRET` → chave utilizada para autenticação por token.
+- `VITE_API_URL` → URL da API consumida pelo front-end React.
 
----```
+O arquivo `.env` não deve ser enviado ao repositório público, pois pode conter dados sensíveis.
+
+---
 
 # 8. Manual do Usuário
 
@@ -582,6 +598,8 @@ Para cadastrar uma nova meta ou atividade:
 - **Página não carregou corretamente.**  
   **Solução:** atualizar o navegador ou limpar o cache.
 
+---
+
 # 9. Decisões de Projeto e Limitações
 
 ## 9.1 Decisões Importantes
@@ -639,6 +657,8 @@ A versão atual priorizou as funcionalidades centrais do sistema, como autentica
 - Aplicativo para Android e iOS.
 - Maior personalização do perfil do usuário.
 
+---
+
 # 10. Testes Unitários com Jest
 
 Esta seção apresenta os testes unitários implementados com o framework **Jest**, conforme estudado na disciplina. Esses testes permitem validar partes importantes da lógica do sistema _The_Organizator_ e garantir que funções essenciais continuem funcionando corretamente mesmo após alterações no código.
@@ -662,22 +682,30 @@ Os testes unitários foram criados para:
 
 Antes de rodar os testes no back-end, instale as dependências:
 
-    npm install
+```bash
+npm install
+```
 
 Para executar os testes:
 
-    npm run test
+```bash
+npm run test
+```
 
 O Jest reconhece automaticamente arquivos com os seguintes padrões:
 
-    *.test.js
-    *.spec.js
+```
+*.test.js
+*.spec.js
+```
 
 ## 10.4 Organização
 
 Os arquivos de teste foram organizados na pasta:
 
-    backEnd/tests
+```
+backEnd/tests
+```
 
 ## 10.5 Testes Implementados no Projeto
 
@@ -706,19 +734,19 @@ describe("validaTituloMeta", () => {
     expect(resultado).toBe(false);
   });
 });
-
+```
 
 ## 10.7 Benefícios dos Testes Unitários
 
 Os principais benefícios percebidos foram:
 
-Mais segurança ao refatorar o código;
-Menor chance de erros passarem despercebidos;
-Verificação automática dos comportamentos esperados;
-Melhor entendimento das regras internas do sistema;
-Maior qualidade geral do software entregue.
+- Mais segurança ao refatorar o código;
+- Menor chance de erros passarem despercebidos;
+- Verificação automática dos comportamentos esperados;
+- Melhor entendimento das regras internas do sistema;
+- Maior qualidade geral do software entregue.
 
-```
+---
 
 # 11. Referências
 
@@ -745,8 +773,6 @@ Maior qualidade geral do software entregue.
 - OPENAI. _ChatGPT – Ferramenta de Inteligência Artificial utilizada como apoio no desenvolvimento, escrita técnica e organização da documentação._ Disponível em: https://chat.openai.com/. Acesso em: abr. 2026.
 
 - Outras fontes digitais consultadas ao longo do desenvolvimento do sistema _The_Organizator_.
-
----
 
 ---
 
