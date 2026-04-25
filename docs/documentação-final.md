@@ -193,30 +193,45 @@ Liste por camadas.
 
 # 5. Diagramas do Sistema
 
+# 5. Diagramas do Sistema
+
 ## 5.1 Diagrama de Casos de Uso
 
-````## 5.1 Diagrama de Casos de Uso
-
 ```mermaid
-flowchart LR
-  U["👤 Usuário"]
+flowchart TD
 
-  subgraph "The Organizator"
-    UC1("UC1 - Cadastrar Usuário")
-    UC2("UC2 - Efetuar Login")
-    UC3("UC3 - Cadastrar Atividade/Meta")
-    UC4("UC4 - Editar Atividade")
-    UC5("UC5 - Remover Atividade")
-    UC6("UC6 - Registrar Progresso")
-  end
+U[Usuário]
+A[Administrador]
 
-  U --> UC1
-  U --> UC2
-  U --> UC3
-  U --> UC4
-  U --> UC5
-  U --> UC6
-````
+subgraph Sistema_O_Organizador
+
+UC1[Cadastrar Usuário]
+UC2[Efetuar Login]
+UC3[Recuperar Senha]
+UC4[Cadastrar Atividade/Meta]
+UC5[Editar Atividade]
+UC6[Remover Atividade]
+UC7[Visualizar Atividades]
+UC8[Registrar Progresso]
+UC9[Concluir Meta]
+UC10[Gerenciar Usuários]
+UC11[Emitir Relatórios]
+
+end
+
+U --> UC1
+U --> UC2
+U --> UC4
+U --> UC5
+U --> UC6
+U --> UC7
+U --> UC8
+U --> UC9
+
+A --> UC2
+A --> UC10
+A --> UC11
+```
 
 ---
 
@@ -249,35 +264,40 @@ class Atividade {
 Usuario "1" --> "*" Atividade : gerencia
 ```
 
-## 5.3 Diagrama de Sequência (Opcional)
+---
+
+## 5.3 Diagrama de Sequência
 
 ```mermaid
 sequenceDiagram
 
-participant U as Usuário
-participant F as Front-end
-participant B as Back-end
-participant DB as Banco
+actor Usuario
+participant Frontend
+participant Backend
+participant Banco
 
-U->>F: Clica em "Remover"
-F->>B: DELETE /atividades/:id
-Note over B: Valida token
-B->>DB: DELETE atividade
-DB-->>B: OK
-B-->>F: Status 200
-F-->>U: Remove da tela
+Usuario->>Frontend: Preenche cadastro
+Frontend->>Backend: Envia dados
+Backend->>Banco: Salva usuário
+Banco-->>Backend: Confirmação
+Backend-->>Frontend: Sucesso
+Frontend-->>Usuario: Cadastro realizado
 ```
 
-## 5.4 Diagrama de Navegação (Opcional)
-
-Mapa simples das telas do sistema e como o usuário navega entre elas:
-
-- Tela de login
-- Tela principal
-- Tela de cadastro/edição
-- Outras telas relevantes
-
 ---
+
+## 5.4 Diagrama de Navegação
+
+```mermaid
+flowchart LR
+
+Login --> Dashboard
+Dashboard --> CadastroMeta
+Dashboard --> ListaMetas
+ListaMetas --> EditarMeta
+ListaMetas --> ExcluirMeta
+Dashboard --> Perfil
+```
 
 # 6. Descrição dos Módulos e Componentes
 
